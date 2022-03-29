@@ -7,13 +7,13 @@ int main()
 
   std::string divideLine(60, '=');
 
-//  std::cout << divideLine << std::endl;
-//
-//  MySystem1.printSystem();
-//
-//  std::cout << divideLine << std::endl;
-//
-//  MySystem1.inverseMatrixMethod();
+  std::cout << divideLine << std::endl;
+
+  MySystem1.printSystem();
+
+  std::cout << divideLine << std::endl;
+
+  MySystem1.inverseMatrixMethod();
 
   std::cout << divideLine << std::endl;
 

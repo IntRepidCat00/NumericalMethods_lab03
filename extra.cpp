@@ -2,6 +2,8 @@
 
 double LinearEquationSystem::calcAlgebraicComplement(const double matrix[3][3], int row, int col)
 {
+  std::cout << std::endl;
+
   std::cout << "--------------Calculating algebraic complement" << "[" << row+1 << "]"
       << "[" << col+1 << "]" << "--------" << std::endl;
 
@@ -34,14 +36,19 @@ double LinearEquationSystem::calcAlgebraicComplement(const double matrix[3][3], 
 
   algebraicComplement = pow(-1, row+col) * ((minor2d[0] * minor2d[3] - minor2d[1] * minor2d[2]));
   std::cout << "Algebraic complement[" << row+1 << "][" << col+1 << "]:" << algebraicComplement << std::endl;
+
+  std::cout << std::endl;
+
   return algebraicComplement;
 }
 
 double LinearEquationSystem::calcDeterminant(const double matrix[3][3])
 {
+  std::cout << std::endl;
+
   std::cout << "--------------Calculating determinant-----------------------" << std::endl;
 
-  double det;
+  double det{0};
 
   for(int i{0}; i < 3; i++)
   {
@@ -50,11 +57,15 @@ double LinearEquationSystem::calcDeterminant(const double matrix[3][3])
 
   std::cout << "Determinant: " << det << std::endl;
 
+  std::cout << std::endl;
+
   return det;
 }
 
 void LinearEquationSystem::calcInverseMatrix()
 {
+  std::cout << std::endl;
+
   std::cout << "--------------Calculating inverse matrix A------------------" << std::endl;
 
   for(int i{0}; i < 3; i++)
@@ -75,10 +86,14 @@ void LinearEquationSystem::calcInverseMatrix()
     }
     std::cout << std::endl;
   }
+
+  std::cout << std::endl;
 }
 
 void LinearEquationSystem::inverseMatrixMethod()
 {
+  std::cout << std::endl;
+
   std::cout << "**************Inverse Matrix Method ************************" << std::endl;
 
   determinant = calcDeterminant(aMatrix);
@@ -101,10 +116,14 @@ void LinearEquationSystem::inverseMatrixMethod()
     }
     std::cout << xMatrix[i][0] << std::endl;
   }
+
+  std::cout << std::endl;
 }
 
 void LinearEquationSystem::printSystem()
 {
+  std::cout << std::endl;
+
   std::cout << "--------------Linear Equation System------------------------" << std::endl;
   for(int i{0}; i < 3; i++)
   {
@@ -120,10 +139,14 @@ void LinearEquationSystem::printSystem()
     }
     std::cout << "= " << bMatrix[i][0] << std::endl;
   }
+
+  std::cout << std::endl;
 }
 
 void LinearEquationSystem::calcXxBMatrix(double (*XxBMatrix)[3][3], int num)
 {
+  std::cout << std::endl;
+
   std::cout << "--------------Calculating matrixA[" << num+1 << "]------------------------" << std::endl;
 
   std::cout << "MatrixA[" << num+1 << "]" << std::endl;
@@ -145,10 +168,12 @@ void LinearEquationSystem::calcXxBMatrix(double (*XxBMatrix)[3][3], int num)
     std::cout << std::endl;
   }
 
+  std::cout << std::endl;
 }
 
 void LinearEquationSystem::CramersMethod()
 {
+  std::cout << std::endl;
   std::cout << "**************Cramer's Method*******************************" << std::endl;
 
   double AMatrix[3][3], detA;
